@@ -1,7 +1,6 @@
----
-title: "Titanic Passenger Survival Prediction"
-output: html_document
----
+# Titanic Passenger Survival Prediction
+
+*Authors* - *Shashwat Bhattacharjee*
 
 ```{r setup, echo=FALSE, message=FALSE}
 setwd("C:/Users/SHASHWAT/Documents/R tutorial 9")
@@ -80,8 +79,9 @@ test_data$FamSize<-factor(test_data$FamSize)
 library(ggplot2)
 plot_sex<-ggplot(data=train_data, aes(x=Survived))+geom_bar(aes(fill=Sex))+facet_grid(.~Sex)
 plot_sex
-```
-  
+``` 
+![Plot](Rplot.jpeg)  
+
 #### Studying the Dependency of ticket fare on their survival  
 
 ```{r fig.cap="Figure 2:This is a plot to showing the survival of Titanic passengers according to their ticket fare."}
@@ -89,6 +89,7 @@ plot_sex
 plot_fare<-ggplot(data=train_data, aes(x=Survived))+geom_bar(aes(fill=Fare))+facet_grid(.~Fare)
 plot_fare
 ```
+![Plot](plot_fare.jpeg)
   
 #### Studying the Dependency of Age on their survival  
 ```{r fig.cap="Figure 3:This is a plot to showing the survival of Titanic passengers according to their Age."}
@@ -96,13 +97,15 @@ plot_Age<-ggplot(data=train_data, aes(x=Survived))+geom_bar(aes(fill=Age))+facet
 plot_Age
 
 ```
-  
+![Plot](plot_age.jpeg)
+
 #### Studying the Dependency of family size on their survival 
 ```{r fig.cap="Figure 4:This is a plot to showing the survival of Titanic passengers according to their family size."}
 plot_Fam<-ggplot(data=train_data, aes(x=Survived))+geom_bar(aes(fill=FamSize))+facet_grid(.~FamSize)
 plot_Fam
 
 ```
+![Plot](plot_fam.jpeg)
   
 #### Removing unnecessary features  
 ```{r}
